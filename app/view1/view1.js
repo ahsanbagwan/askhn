@@ -7,15 +7,15 @@ angular.module('myApp.view1', ['ngRoute'])
     	var jsonArrayOfObjects = [];
     	var url = "https://hacker-news.firebaseio.com/v0/item/numberhere.json";
     	angular.forEach(result, function(response) {
-		var newUrl = url.replace(/numberhere.json/, response+'.json');
-    			    $http.get(newUrl).
-                    success(function(data, status, headers, config) {
- 						var obj = {};
- 						obj.id = data.id;
- 						obj.title = data.title;
-						jsonArrayOfObjects.push(obj);
+		      var newUrl = url.replace(/numberhere.json/, response+'.json');
+    		  $http.get(newUrl).
+              success(function(data, status, headers, config) {
+ 					var obj = {};
+ 					obj.id = data.id;
+ 					obj.title = data.title;
+                    jsonArrayOfObjects.push(obj);
 						
-						$scope.posts = jsonArrayOfObjects;
+					$scope.posts = jsonArrayOfObjects;
 				});	
   		});
     }).
