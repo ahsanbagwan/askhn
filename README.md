@@ -14,7 +14,7 @@ Putting together a decent routing and then adding authentication to it.
 
 * Deploy to heroku free tier for the time being
 
-* Write unit tests
+~~* Write unit tests~~ Already in place. Just have to build on it.
 
 * Integrate Travis CI
 
