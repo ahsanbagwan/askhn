@@ -1,5 +1,7 @@
 # Meta HN
 
+[![Build Status](https://travis-ci.org/ahsanbagwan/askhn.png)](https://travis-ci.org/ahsanbagwan/askhn)
+
 Thought of making a meta discussion site on HN. Right now only the show/ask items are consumed by the Angular.js front-end.
 
 Build upon the styles provided out of the box by PureCSS.
