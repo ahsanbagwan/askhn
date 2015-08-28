@@ -8,14 +8,13 @@ angular.module('myApp.view1', ['ngRoute'])
     	var url = "https://hacker-news.firebaseio.com/v0/item/numberhere.json";
     	angular.forEach(result, function(response) {
 		var newUrl = url.replace(/numberhere.json/, response+'.json');
-    			console.log("newUrl " + newUrl);
-    			$http.get(newUrl).
+    			    $http.get(newUrl).
                     success(function(data, status, headers, config) {
  						var obj = {};
  						obj.id = data.id;
  						obj.title = data.title;
 						jsonArrayOfObjects.push(obj);
-						console.log("jsonArrayOfObjects " + jsonArrayOfObjects );
+						
 						$scope.posts = jsonArrayOfObjects;
 				});	
   		});
