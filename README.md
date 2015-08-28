@@ -8,3 +8,9 @@ Thought of making a meta discussion site on HN. Right now only the show/ask item
 
 * Give the users an option to add comments
 
+* Deploy to heroku free tier for the time being
+
+* Write unit tests
+
+* Integrate Travis CI
+
