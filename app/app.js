@@ -28,10 +28,6 @@ config(['$routeProvider', function($routeProvider, $locationProvider) {
       templateUrl: 'view2/signup.html',
       controller: 'SignupCtrl'	
     }).
-    when('/logout', {
-      templateUrl: 'view2/login.html',
-      controller: 'View2Ctrl'	
-    }).
     otherwise({redirectTo: '/'});
   
 }])
