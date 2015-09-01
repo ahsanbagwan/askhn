@@ -24,5 +24,39 @@ angular.module('myApp').
 
          	    });
          }
+         signup: function(user) {
+         	return $http.post('/auth/signup', user)
+         	    .success(function() {
+         	    	$location.path('/login');
+         	    	$alert({
+         	    		title: 'Congratulations!',
+         	    		content: 'Your account has been created.',
+         	    		animation: 'fadeZoomFadeDown',
+         	    		type: 'material',
+         	    		duration: 3
+         	    	});
+         	    })
+         	    .error(function() {
+         	    	$alert({
+         	    		title: 'Error!',
+         	    		content: response.data,
+         	    		animation: 'fadeZoomFadeDown',
+         	    		type: 'material',
+         	    		duration: 3
+         	    	});
+         	    });
+
+         },
+         logout: function() 
+         {
+         	delete $window.localStorage.token;
+         	$rootScope.currentUser = null;
+         	$alert({
+         		content: 'You have been logged out.',
+         		animation: 'fadeZoomFadeDown',
+         		type: 'material',
+         		duration: 3
+         	});
+         }
  
     });
