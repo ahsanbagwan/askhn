@@ -1,6 +1,5 @@
 'use strict';
 
-
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
   'ngRoute',
@@ -9,7 +8,9 @@ angular.module('myApp', [
   'myApp.version',
   'bgf.paginateAnything'
 ]).
-config(['$routeProvider', function($routeProvider) {
+config(['$routeProvider', function($routeProvider, $locationProvider) {
+	$locationProvider.html5Mode(true);
+
 	$routeProvider.when('/', {
      templateUrl: 'view1/view1.html',
      controller: 'View1Ctrl'
@@ -18,6 +19,36 @@ config(['$routeProvider', function($routeProvider) {
      templateUrl: 'view2/view2.html',
      controller: 'View2Ctrl'
    }).
-   otherwise({redirectTo: '/'});
+    when('/login', {
+      templateUrl: 'view2/login.html',
+      controller: 'View2Ctrl'	
+    }).
+    when('/signup', {
+      templateUrl: 'view2/login.html',
+      controller: 'View2Ctrl'	
+    }).
+    when('/logout', {
+      templateUrl: 'view2/login.html',
+      controller: 'View2Ctrl'	
+    }).
+    otherwise({redirectTo: '/'});
   
-}]);
+}])
+.config(function ($httpProvider){
+	$httpProvider.interceptors.push(function($rootScope, $q, $window, $location) {
+		return {
+			request: function(config) {
+				if ($window.localStorage.token) {
+					config.headers.Authorization = 'Bearer ' + $window.localStorage.token;
+				}
+				return config;
+			}, 
+			responseError: function(response) {
+				if (response.status === 401 || response.status === 403) {
+					$location.path('/login');
+				}
+				return $q.reject(response);
+			}
+		}	
+    });
+});

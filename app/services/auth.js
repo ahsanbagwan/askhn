@@ -23,7 +23,7 @@ angular.module('myApp').
          	    	});
 
          	    });
-         }
+         },
          signup: function(user) {
          	return $http.post('/auth/signup', user)
          	    .success(function() {
@@ -47,8 +47,7 @@ angular.module('myApp').
          	    });
 
          },
-         logout: function() 
-         {
+         logout: function() {
          	delete $window.localStorage.token;
          	$rootScope.currentUser = null;
          	$alert({
@@ -58,5 +57,5 @@ angular.module('myApp').
          		duration: 3
          	});
          }
- 
+     
     });
