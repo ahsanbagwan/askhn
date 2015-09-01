@@ -21,11 +21,11 @@ config(['$routeProvider', function($routeProvider, $locationProvider) {
    }).
     when('/login', {
       templateUrl: 'view2/login.html',
-      controller: 'View2Ctrl'	
+      controller: 'LoginCtrl'	
     }).
     when('/signup', {
-      templateUrl: 'view2/login.html',
-      controller: 'View2Ctrl'	
+      templateUrl: 'view2/signup.html',
+      controller: 'SignupCtrl'	
     }).
     when('/logout', {
       templateUrl: 'view2/login.html',
@@ -34,7 +34,7 @@ config(['$routeProvider', function($routeProvider, $locationProvider) {
     otherwise({redirectTo: '/'});
   
 }])
-.config(function ($httpProvider){
+.config(function ($httpProvider) {
 	$httpProvider.interceptors.push(function($rootScope, $q, $window, $location) {
 		return {
 			request: function(config) {
