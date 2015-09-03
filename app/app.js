@@ -10,10 +10,6 @@ angular.module('myApp', [
   'bgf.paginateAnything'
 ]).
 config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-	$locationProvider.html5Mode({
-        enabled: true,
-  		requireBase: false
-	});
 	
 	$routeProvider.when('/', {
      templateUrl: 'view1/view1.html',

@@ -7,7 +7,7 @@ angular.module('myApp').
     		$rootScope.currentUser = payload.user;
     	}
 
-         login: function(user) {
+        login: function(user) {
          	return $http.post('/auth/login', user)
          	    .success(function(data){
          	    	$window.localStorage.token = data.token;
