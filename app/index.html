@@ -31,12 +31,11 @@
   <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="#">Meta HN</a>
+        <div class="nav navbar-nav pull-right" ng-if="!currentUser">
+          <span data-match-route="/login"><a href="#/login">Login</a></span>
+          <span data-match-route="/signup"><a href="#/signup">Sign up</a></span>
+        </div>  
     </div>
-    <ul class="nav navbar-nav pull-right" ng-if="!currentUser">
-    <li data-match-route="/login"><a href="/login">Login</a></li>
-    <li data-match-route="/signup"><a href="/signup">Sign up</a></li>
-  </ul>
-  
   </div>
   <ul class="menu">
     <li><a href="#/view1">Show</a></li>
