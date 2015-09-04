@@ -10,7 +10,7 @@ angular.module('myApp.view1', ['ngRoute'])
 		      var newUrl = url.replace(/numberhere.json/, response+'.json');
     		  $http.get(newUrl).
               success(function(data, status, headers, config) {
- 					var obj = {};
+ 			 		var obj = {};
  					obj.id = data.id;
  					obj.title = data.title;
                     jsonArrayOfObjects.push(obj);

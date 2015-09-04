@@ -1,6 +1,7 @@
 angular.module('myApp').
     factory('Auth', function($http, $location, $rootScope, $alert, $window) {
     	var token = $window.localStorage.token;
+    	console.log("token " + token );
 
     	if (token) {
     		var payload = JSON.parse($window.atob(token.split('.')[1]));
@@ -8,6 +9,7 @@ angular.module('myApp').
     	}
 
         login: function(user) {
+        	console.log("in login ");
          	return $http.post('/auth/login', user)
          	    .success(function(data){
          	    	$window.localStorage.token = data.token;
@@ -25,6 +27,7 @@ angular.module('myApp').
          	    });
          },
          signup: function(user) {
+         	console.log("in signup ");
          	return $http.post('/auth/signup', user)
          	    .success(function() {
          	    	$location.path('/login');
