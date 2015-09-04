@@ -19,7 +19,7 @@ angular.module('myApp.view2', ['ngRoute'])
   		});
     }).
     error(function(data, status, headers, config) {
-    	console.log("in success callback");
+    	// @TODO Add decent error handling
       
     });
 }]);

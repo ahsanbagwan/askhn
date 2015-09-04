@@ -16,12 +16,12 @@ angular.module('myApp.view1', ['ngRoute'])
                     jsonArrayOfObjects.push(obj);
 						
 					$scope.posts = jsonArrayOfObjects;
-                    
+
 				});	
   		});
     }).
     error(function(data, status, headers, config) {
-    	console.log("in success callback");
+    	// @TODO Add error hanndling
       
     });
 }]);
