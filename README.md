@@ -14,9 +14,16 @@ Putting together a decent routing and then adding authentication to it.
 
 * ~~Give the users an option to add comments~~ Possibly will do in another project
 
-* Deploy to heroku free tier for the time being
+* ~~Deploy to heroku free tier for the time being~~
 
 * ~~Write unit tests~~ Already in place. Just have to build on it. Refer https://www.airpair.com/angularjs/posts/testing-angular-with-karma Specifically the section on testing controllers
 
 * ~~Integrate Travis CI~~
 
+* Improve Styles
+
+* Add a hover background for Ask and Show routes
+
+Bugs
+
+* Footer remains in the middle of the page for a long time before JSON data loads
