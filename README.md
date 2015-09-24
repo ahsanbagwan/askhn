@@ -10,13 +10,13 @@ Putting together a decent routing and then adding authentication to it.
 
 # TODO
 
-* Add login functionality
+* ~~Add login functionality~~ Non-trivial to retrofit
 
-* Give the users an option to add comments
+* ~~Give the users an option to add comments~~ Possibly will do in another project
 
 * Deploy to heroku free tier for the time being
 
 * ~~Write unit tests~~ Already in place. Just have to build on it. Refer https://www.airpair.com/angularjs/posts/testing-angular-with-karma Specifically the section on testing controllers
 
-* Integrate Travis CI
+* ~~Integrate Travis CI~~
 
