@@ -7,7 +7,8 @@ angular.module('myApp', [
   'myApp.view1',
   'myApp.view2',
   'myApp.version',
-  'bgf.paginateAnything'
+  'bgf.paginateAnything',
+  'http-auth-interceptor'
 ]).
 config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	

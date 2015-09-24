@@ -2,8 +2,10 @@
 
 angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', ['$scope', '$http', function($scope, $http) {
+    
     $http.get('https://hacker-news.firebaseio.com/v0/showstories.json').
     success(function(result, status, headers, config) {
+
     	var jsonArrayOfObjects = [];
     	var url = "https://hacker-news.firebaseio.com/v0/item/numberhere.json";
     	angular.forEach(result, function(response) {
@@ -16,7 +18,7 @@ angular.module('myApp.view1', ['ngRoute'])
                     jsonArrayOfObjects.push(obj);
 						
 					$scope.posts = jsonArrayOfObjects;
-
+                    console.log("in view 1 controller");
 				});	
   		});
     }).

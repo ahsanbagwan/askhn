@@ -1,7 +1,11 @@
-angular.module('myApp')
-    .controller('LoginCtrl', function($scope, Auth) {
-    	$scope.login = function() {
-    		Auth.login({email: $scope.email, password: $scope.password});
-    	};		
+angular.module('myApp', ['http-auth-interceptor'])
+    .controller('LoginCtrl', function($scope, $location, $http, authService) {
 
+    	$scope.showClickable = $location.path === '/login';
+    		
+    	$scope.login = function() {
+    		$http.post('auth/login').success(function(){
+    			authService.loginConfirmed();
+    		})
+    	};		
     });
