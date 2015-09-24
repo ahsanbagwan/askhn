@@ -31,13 +31,9 @@
   <div class="header">
     <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
         <a class="pure-menu-heading" href="#">Meta HN</a>
-        <div class="nav navbar-nav pull-right" ng-if="!currentUser">
-          <span data-match-route="/login"><a href="#/login">Login</a></span>
-          <span data-match-route="/signup"><a href="#/signup">Sign up</a></span>
-        </div>
     </div>
   </div>
-  <ul class="menu" ng-hide="showClickable">
+  <ul class="menu">
     <li><a href="#/view1">Show</a></li>
     <li><a href="#/view2">Ask</a></li>
   </ul>
@@ -64,8 +60,6 @@
   <script src="app.js"></script>
   <script src="view1/view1.js"></script>
   <script src="view2/view2.js"></script>
-  <script src="view2/login.js"></script>
-  <script src="view2/signup.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

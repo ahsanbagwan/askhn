@@ -10,7 +10,7 @@ Putting together a decent routing and then adding authentication to it.
 
 # TODO
 
-* ~~Add login functionality~~ Non-trivial to retrofit
+* ~~Add login functionality~~ Non-trivial to retrofit Express
 
 * ~~Give the users an option to add comments~~ Possibly will do in another project
 
